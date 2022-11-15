@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
 </head>
+{{$Sn=1}}
 <body>
     <h1 style="text-align: center">Todo List</h1><br><br>
     <div class="container">
@@ -34,7 +35,7 @@
     <tbody>
     @foreach($list as $value)
     <tr>
-        <td>{{$value->id}}}</td>
+        <td>{{$Sn++}}}</td>
         <td>{{$value->title}}</td>
         <td>
             <a href="/edit/{{$value->id}}" class="btn btn-success">Edit</a>
